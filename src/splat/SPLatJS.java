@@ -307,6 +307,10 @@ public class SPLatJS {
 
 		try {
 			long ti = System.currentTimeMillis();
+			out.print("begin of test: ");
+			SimpleDateFormat sdf1 = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
+			out.println(sdf1.format(Calendar.getInstance().getTime()));
+			
 			Process process = new ProcessBuilder(new String[] { "bash", "-c", command }).redirectErrorStream(true)
 					.start();
 			tf = System.currentTimeMillis() - ti;
